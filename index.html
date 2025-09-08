@@ -25,23 +25,32 @@
 
 <body class="font-family">
     <header>
-        <div class="bg-[#15803d] sm:py-7 md:py-7 sm:10 md:p-10">
-            <nav
-                class="sm:flex-row md:flex sm:justify-center md:justify-between sm:items-center text-white font-semibold">
-                <h1 class=" text-sm md:text-xl">Green Earth</h1>
-                <ul class="flex md:gap-5 sm:mt-3">
-                    <li><a href="#"></a>About</li>
-                    <li><a href="#"></a>Gallery</li>
-                    <li><a href="#"></a>Plant a Tree</li>
-
-                </ul>
-                <button
-                    class="rounded-full md:rounded-full p-2 bg-[#facc15] text-[#15803D] font-semibold mt-3 hover:bg-lime-200">Plant
-                    a
-                    Tree</button>
-            </nav>
-
-        </div>
+        <div class="navbar bg-[#15803d] shadow-sm">
+  <div class="navbar-start">
+    <div class="dropdown">
+      <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /> </svg>
+      </div>
+      <ul
+        tabindex="0"
+        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+        
+      
+      </ul>
+    </div>
+    <a class="btn btn-ghost text-2xl text-white hover:bg-lime-700">Green Earth</a>
+  </div>
+  <div class="navbar-center hidden lg:flex">
+    <ul class="menu menu-horizontal px-1 text-white">
+      <li><a>About</a></li>
+      <li><a>Gallery</a></li>
+      <li><a>Plant a Tree</a></li>
+    </ul>
+  </div>
+  <div class="navbar-end">
+    <a class="btn text-[#15803d] bg-[#facc15] hover:bg-lime-600 hover:text-white rounded-full">Plant a Tree</a>
+  </div>
+</div>
     </header>
 
     <!-- section---- Plant a Tree, Grow a Future -->
@@ -63,16 +72,29 @@
     </main>
 
     <!-- Choose Your Trees*** -->
-    <section class="bg-[#f0fdf4] py-8">
+    <section class="bg-[#f0fdf4] p-8">
         <h2 class="text-center font-bold text-2xl">Choose Your Trees</h2>
-        <div class="parent-div flex justify-between items-center p-9">
-            <div id="CateGories">
+        
+        <!-- card*** -->
+        <div class="parent-div mt-8 flex flex-col md:flex-row justify-between items-center gap-5">
+            <div id="CateGories" class=" md:w-2/12 p-1">
                 <h4 class="font-bold text-xl">Categories</h4>
-                <button class="bg-[#15803D] rounded text-center py-2 px-2 w-full text-white mt-3">All Trees</button>
+                <p id="Categoriesbtn" class="bg-[#15803D] rounded text-center py-2 px-2 w-full text-white mt-3">All Trees</p>
             </div>
-            <div></div>
-            <div>
-                <h5 class="font-bold bg-white rounded-lg p-4">Your Cart</h5>
+
+            <!-- All Img** -->
+
+            <div id="allplants" class="grid grid-cols-1 md:grid-cols-3 gap-5 p-4 md:w-8/12">
+                <div id="details" class="p-4">
+
+                </div>
+
+            </div>
+
+            <!-- ADD to cart** -->
+
+            <div class="border">
+                <h5 class="font-bold bg-white rounded-lg p-3 ">Your Cart</h5>
             </div>
 
         </div>
@@ -153,13 +175,13 @@
                        
                     </select>
 
-                    <button class="rounded-full sm:w-full sm:h-9 md:w-80 md:h-10 bg-[#facc15] text-[#15803D] font-semibold mt-3 hover:bg-lime-600 hover:text-white">Donate Now</button> </label> 
+                    <button class="rounded-full w-full md:w-80 md:h-10 bg-[#facc15] text-[#15803D] font-semibold mt-3 hover:bg-lime-600 hover:text-white">Donate Now</button> </label> 
         </div>
     </section>
 
     <footer class="bg-[#14532D]">
         <h1 class="text-center text-gray-100 py-9">© 2025 Green Earth. All Rights Reserved.</h1>
-
+   
     </footer>
 
     <script src="./index.js"></script>
