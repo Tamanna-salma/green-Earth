@@ -17,6 +17,7 @@ const categoriesLoad = async () => {
 
       li.addEventListener("click", (e) => {
         if (e.target.tagName === "LI") {
+          loading()
           const id = e.target.dataset.id;
           load(id);
         }
@@ -141,21 +142,13 @@ document.getElementById('plantModal').showModal();
 
 }
 
+const loading = ()=>{
+allplants.innerHTML = `
+    <div > <span class="loading loading-bars loading-xl"> </span></div>
 
 
-
-// All trees////
-
-const alltree= async () => {
-  try {
-    const response = await fetch(`https://openapi.programming-hero.com/api/plants`);
-    const data = await response.json();
-    console.log(data);
-  }
-  catch(error){
-    console.log(error);
-
-  }
-
+    `
 }
+
+
 

@@ -15,6 +15,8 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
         rel="stylesheet">
+    <!-- fontawesome*** -->
+    <script src="https://kit.fontawesome.com/f7b7eb0226.js" crossorigin="anonymous"></script>
 
     <style>
         * {
@@ -26,31 +28,35 @@
 <body class="font-family">
     <header>
         <div class="navbar bg-[#15803d] shadow-sm">
-  <div class="navbar-start">
-    <div class="dropdown">
-      <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /> </svg>
-      </div>
-      <ul
-        tabindex="0"
-        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-        
-      
-      </ul>
-    </div>
-    <a class="btn btn-ghost text-2xl text-white hover:bg-lime-700">Green Earth</a>
-  </div>
-  <div class="navbar-center hidden lg:flex">
-    <ul class="menu menu-horizontal px-1 text-white">
-      <li><a>About</a></li>
-      <li><a>Gallery</a></li>
-      <li><a>Plant a Tree</a></li>
-    </ul>
-  </div>
-  <div class="navbar-end">
-    <a class="btn text-[#15803d] bg-[#facc15] hover:bg-lime-600 hover:text-white rounded-full">Plant a Tree</a>
-  </div>
-</div>
+            <div class="navbar-start">
+                <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h8m-8 6h16" />
+                        </svg>
+                    </div>
+                    <ul tabindex="0"
+                        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+
+
+                    </ul>
+                </div>
+                <a class="btn btn-ghost text-2xl text-white hover:bg-lime-700">Green Earth</a>
+            </div>
+            <div class="navbar-center hidden lg:flex">
+                <ul class="menu menu-horizontal px-1 text-white">
+                    <li><a>About</a></li>
+                    <li><a>Gallery</a></li>
+                    <li><a>Plant a Tree</a></li>
+                </ul>
+            </div>
+            <div class="navbar-end">
+                <a class="btn text-[#15803d] bg-[#facc15] hover:bg-lime-600 hover:text-white rounded-full">Plant a
+                    Tree</a>
+            </div>
+        </div>
     </header>
 
     <!-- section---- Plant a Tree, Grow a Future -->
@@ -76,15 +82,16 @@
         <div>
             <h2 class="text-center font-bold text-2xl">Choose Your Trees</h2>
         </div>
-        
+
         <!-- card*** -->
         <div class="parent-div mt-8 flex flex-col md:flex-row justify-between  gap-4">
-            
-                <div id="CateGories" class=" md:w-2/12 p-1">
+
+            <div id="CateGories" class=" md:w-2/12 p-1">
                 <h4 class="font-bold text-xl">Categories</h4>
-                <h3 id="Categoriesbtn" class="bg-[#15803D] rounded text-center py-3 p-3 w-full text-white mt-3">All Trees</h3>
+                <h3 id="Categoriesbtn" class="bg-[#15803D] rounded text-center py-3 p-3 w-full text-white mt-3">All
+                    Trees</h3>
             </div>
-            <div id="cardContainer"> 
+            <div id="cardContainer">
 
 
             </div>
@@ -100,35 +107,38 @@
 
             <!-- ADD to cart** -->
 
-            <div class="border">
-                <h5 class="font-bold bg-white rounded-lg p-3 ">Your Cart</h5>
+            <div class="cart-box w-2/12 p-3">
+                <h5 class="font-bold bg-white rounded-lg">Your Cart</h5>
+                
+                <div></div>
+             
+  
+
             </div>
-            
-            </div>
+            <div></div>
+
+        </div>
     </section>
 
     <section>
-         <!-- modal--------------- -->
+        <!-- modal--------------- -->
 
-            <!-- Open the modal using ID.showModal() method  -->
-             <!-- <button class="btn" onclick="plantModal.showModal()">open modal</button> -->
+        <dialog id="plantModal" class="modal modal-bottom sm:modal-middle">
+            <div class="modal-box">
 
-            <dialog id="plantModal" class="modal modal-bottom sm:modal-middle">
-                <div class="modal-box"> 
+                <div id="detailsContainer"></div>
+                <div class="modal-action">
 
-                    <div id="detailsContainer"></div> 
-                        <div class="modal-action">
- 
-                        </div>
-
-                    <div class="modal-action">
-                        <form method="dialog">
-                            <!-- if there is a button in form, it will close the modal -->
-                            <button class="btn">Close</button>
-                        </form>
-                    </div>
                 </div>
-            </dialog>
+
+                <div class="modal-action">
+                    <form method="dialog">
+                        <!-- if there is a button in form, it will close the modal -->
+                        <button class="btn">Close</button>
+                    </form>
+                </div>
+            </div>
+        </dialog>
     </section>
 
     <!-- section Campaign*** -->
@@ -195,25 +205,27 @@
             <label class="floating-label">
                 <input type="text" placeholder="Your Name" class="input input-lg" /></label>
 
-                <label class="floating-label">
-                    <input type="text" placeholder="Your Email Address" class="input input-lg" /></label>
+            <label class="floating-label">
+                <input type="text" placeholder="Your Email Address" class="input input-lg" /></label>
 
-                    <select class="select">
-                        <option disabled selected>Number of trees</option>
-                        <option>1.Mango trees</option>
-                        <option>2.Apple trees</option>
-                       
-                    </select>
+            <select class="select">
+                <option disabled selected>Number of trees</option>
+                <option>1.Mango trees</option>
+                <option>2.Apple trees</option>
 
-                    <div class="sm:w-80 md:w-full">
-                        <p class="rounded-full  bg-[#facc15] h-8  text-[#15803D] text-center font-semibold hover:bg-lime-600 hover:text-white">Donate Now</p> 
-                    </div>
+            </select>
+
+            <div class="sm:w-80 md:w-full">
+                <p
+                    class="rounded-full  bg-[#facc15] h-8  text-[#15803D] text-center font-semibold hover:bg-lime-600 hover:text-white">
+                    Donate Now</p>
+            </div>
         </div>
     </section>
 
     <footer class="bg-[#14532D]">
         <h1 class="text-center text-gray-100 py-9">© 2025 Green Earth. All Rights Reserved.</h1>
-   
+
     </footer>
 
     <script src="./index.js"></script>
