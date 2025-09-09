@@ -82,9 +82,10 @@
             
                 <div id="CateGories" class=" md:w-2/12 p-1">
                 <h4 class="font-bold text-xl">Categories</h4>
-                <h3 id="Categoriesbtn" class="bg-[#15803D] rounded text-center py-2 px-2 w-full text-white mt-3">All Trees</h3>
+                <h3 id="Categoriesbtn" class="bg-[#15803D] rounded text-center py-3 p-3 w-full text-white mt-3">All Trees</h3>
             </div>
-            <div id="cardContainer">
+            <div id="cardContainer"> 
+
 
             </div>
 
@@ -102,10 +103,32 @@
             <div class="border">
                 <h5 class="font-bold bg-white rounded-lg p-3 ">Your Cart</h5>
             </div>
+            
             </div>
+    </section>
 
-       
+    <section>
+         <!-- modal--------------- -->
 
+            <!-- Open the modal using ID.showModal() method  -->
+             <!-- <button class="btn" onclick="plantModal.showModal()">open modal</button> -->
+
+            <dialog id="plantModal" class="modal modal-bottom sm:modal-middle">
+                <div class="modal-box"> 
+
+                    <div id="detailsContainer"></div> 
+                        <div class="modal-action">
+ 
+                        </div>
+
+                    <div class="modal-action">
+                        <form method="dialog">
+                            <!-- if there is a button in form, it will close the modal -->
+                            <button class="btn">Close</button>
+                        </form>
+                    </div>
+                </div>
+            </dialog>
     </section>
 
     <!-- section Campaign*** -->
@@ -182,7 +205,9 @@
                        
                     </select>
 
-                    <button class="rounded-full sm:w-full sm:h-16 md:w-80 md:h-10 bg-[#facc15] text-[#15803D] font-semibold mt-3 hover:bg-lime-600 hover:text-white">Donate Now</button> </label> 
+                    <div class="sm:w-80 md:w-full">
+                        <p class="rounded-full  bg-[#facc15] h-8  text-[#15803D] text-center font-semibold hover:bg-lime-600 hover:text-white">Donate Now</p> 
+                    </div>
         </div>
     </section>
 
